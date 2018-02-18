@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  background-color: $color-grey-light;
+
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-black;
+  
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(6, min-content);
+  max-width: 120rem;
+  margin: -7rem auto 0 auto;
+  background-color: $color-white;
+
+  @include respond(phone) {
+    margin: 0 auto;
+  }
+
+  @include respond(tab-port) {
+    transform: translateX(0);
+  }
+}
+
+.add_margins {
+  transform: translateX(70%);
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}

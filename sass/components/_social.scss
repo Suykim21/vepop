@@ -1,0 +1,13 @@
+.social {
+  visibility: hidden; 
+  opacity: 0;
+  display: none !important;
+
+  @include respond(phone) {
+    visibility: visible;
+    display: block;
+    display: flex;
+    justify-content: space-around !important;
+  }
+  
+}

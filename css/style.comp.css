@@ -147,7 +147,7 @@ a {
     height: 100%; }
   .header__slideshow:after {
     content: '';
-    background: transparent url(../../img/pattern.png) repeat top left; }
+    background: transparent url(../img/pattern.png) repeat top left; }
   .header__item span {
     position: absolute;
     top: 0px;

@@ -16,18 +16,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 .header__item:nth-child(1) span {
-  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../../img/background_four.jpg); }
+  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../img/background_four.jpg); }
 
 .header__item:nth-child(2) span {
-  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../../img/background_two.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../img/background_two.jpeg);
   animation-delay: 15s; }
 
 .header__item:nth-child(3) span {
-  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../../img/background_five.jpg);
+  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../img/background_five.jpg);
   animation-delay: 30s; }
 
 .header__item:nth-child(4) span {
-  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../../img/background_one.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.3), rgba(166, 41, 59, 0.3)), url(../img/background_one.jpeg);
   animation-delay: 45s; }
 
 @keyframes imageAnimation {

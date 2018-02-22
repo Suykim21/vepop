@@ -1,0 +1,43 @@
+.heading-two {
+  font-family: $font-heading;
+  font-size: 4.3rem;
+  font-weight: 600;
+
+  color: $color-primary-dark-two;
+  text-align: right;
+
+  // padding-right: 3rem;
+  z-index: 1;
+  
+}
+
+.heading-three {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: .8;
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+@include respond(phone) {
+  .heading-three--tag {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-four {
+  font-family: $font-heading;
+  font-size: 3rem;
+  font-weight: 400;
+  color: $color-primary-dark-two;
+
+  line-height: 1;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  // line-height: 1.2;
+}

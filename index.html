@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,900' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>VePop</title>
 </head>
@@ -26,7 +25,8 @@
           <svg class="user-nav__icon">
             <use xlink:href="img/sprite.svg#icon-home"></use>
           </svg>
-          <span class="user-nav__user-name">Home</span>
+          <a href="index.html" class="user-nav__user-name">Home</a>
+          <!-- <span class="user-nav__user-name">Home</span> -->
         </div>
         <div class="user-nav__icon-box">
           <svg class="user-nav__icon">
@@ -38,7 +38,8 @@
           <svg class="user-nav__icon">
             <use xlink:href="img/sprite.svg#icon-map"></use>
           </svg>
-          <span class="user-nav__user-name">Events</span>
+          <a href="events.html" class="user-nav__user-name">Events</a>
+          <!-- <span class="user-nav__user-name">Events</span> -->
         </div>
         <div class="user-nav__icon-box">
           <svg class="user-nav__icon">
@@ -81,10 +82,15 @@
     <header class="header">
 
       <div class="header__text">
-        <h2>State</h2>
-        <p>of</p>
-        <div>
-          <h3>awesome</h3>
+        <div class="header__title">
+          <h3 class="heading-three">vepop</h3>
+          <h3 class="heading-three heading-three--bold">fun</h3>
+          <p class="location">los angeles</p>
+        </div>
+        <div class="header__tagline">
+          <h3 class="heading-three heading-three--bold heading-three--tag">art, fashion, food & music for new culture</h3>
+          <a href="events.html" class="button" target="
+          _blank">check now &#10596;</a>
         </div>
       </div>
       <ul class="header__slideshow">
@@ -99,12 +105,57 @@
         </li>
         <li class="header__item">
           <span>Image 04</span>
-         
+
         </li>
       </ul>
     </header>
+    <!-- display flex column -->
     <section class="about">
-      ABOUT SECTION
+      <h2 class="heading-two">welcome to our wonderful world</h2>
+      <!-- display grid one -->
+      <div class="about__host">
+        <!-- inner display grid -->
+        <div class="about__host__pic">
+          <img src="../img/fun_five.jpg" alt="fun five" class="about__host__pic--one">
+          <img src="../img/drinks_one.jpeg" alt="drinks" class="about__host__pic--two">
+          <img src="../img/art_seven.jpg" alt="drinks" class="about__host__pic--three">
+          <div class="about__host__pic--line heading-two">Joy</div>
+          <div class="vertical-line"></div>
+        </div>
+
+        <div class="about__host__cta">
+          <h4 class="heading-four">Redefine and Inspire Unique Experience</h4>
+          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione molestias nulla placeat laboriosam quasi in minima
+            natus, at maxime illum pariatur voluptatibus explicabo dolorem expedita.</p>
+          <a href="#" class="button">join</a>
+        </div>
+      </div>
+
+
+      <!-- <div class="about__host">
+    
+        <div class="about__host__pic">
+          <img src="../img/fun_five.jpg" alt="fun five" class="about__host__pic--one">
+          <img src="../img/drinks_one.jpeg" alt="drinks" class="about__host__pic--two">
+          <img src="../img/art_seven.jpg" alt="drinks" class="about__host__pic--three">
+          <div class="about__host__pic--line heading-two">Fun</div>
+
+        </div>
+
+        <div class="about__host__cta">
+          <h4 class="heading-four">Redefine and Inspire Unique Experience</h4>
+          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione molestias nulla placeat laboriosam quasi in minima
+            natus, at maxime illum pariatur voluptatibus explicabo dolorem expedita.</p>
+          <a href="#" class="button">join</a>
+        </div>
+      </div> -->
+
+
+
+      <!-- display grid two -->
+      <!-- <div class="about__guest">
+        guest
+      </div> -->
     </section>
   </div>
 

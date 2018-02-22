@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+
+  color: $color-primary-light;
+  font-size: 1.5rem;
+
+  border: 2px solid $color-primary-light;
+
+  padding: .8rem 3rem;
+  margin-top: 2rem;
+
+  transition: all .2s;
+
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-white;
+  }
+
+  @include respond(phone) {
+    background-color: $color-primary-light;
+    color: $color-white;
+    margin-top: 10rem;
+  }
+
+}

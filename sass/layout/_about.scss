@@ -1,0 +1,116 @@
+.about {
+  margin-top: -25rem;
+  padding: 15rem 5vw;
+
+  display: flex;
+  flex-direction: column;
+
+  &__host {
+    margin: 5rem 0;
+    min-height: 40rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(55vh, 1fr);
+    grid-gap: 1rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+    &__pic {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      align-items: center;
+
+      // background-image: linear-gradient(rgba($color-primary-light, .5), rgba($color-primary-light, .5)), url(../img/background_three.jpeg);
+      background-size: cover;
+      background-position: center;
+
+      position: relative;
+
+      &--one {
+        width: 100%;
+        grid-row: 1/5;
+        grid-column: 3/7;
+
+        box-shadow: 0 2rem 5rem rgba(#000, .2);
+
+        z-index: 1;
+        
+      }
+
+      &--two {
+        width: 115%;
+        grid-row: 4/7;
+        grid-column: 4/7;
+        z-index: 3;
+
+        box-shadow: 0 2rem 5rem rgba(#000, .2);
+
+        @include respond(tab-land) {
+          grid-column: 2/5;
+        }
+      }
+
+      &--three {
+        width: 100%;
+        grid-column: 1/4;
+        grid-row: 1/4;
+
+        position: absolute;
+        top: -62%;
+
+        z-index: 2;
+
+        @include respond(tab-land) {
+          top: -15%;
+        }
+
+        @include respond(phone) {
+          top: -40%;
+        }
+      }
+
+      &--line {
+        grid-row:4/7;
+        grid-column: 1/2;
+        transform: rotate(-90deg);
+        opacity: .5;
+        // transform-origin: left top 0;
+      }
+    }
+
+
+    &__cta {
+      padding: 5rem 4vw;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      /*
+      display: grid;
+      align-content: center;
+      justify-items: start;
+      */
+    }
+
+  }
+
+  &__guest {
+    border: 3px solid black;
+  }
+}
+
+.vertical-line {
+  height: 100%;
+  grid-row: 1/6;
+  grid-column: 2/7;
+  border-left: 1rem solid $color-primary-dark-two;
+  border-bottom: 1rem solid $color-primary-dark-two;
+}

@@ -8,6 +8,15 @@
 
   // padding-right: 3rem;
   z-index: 1;
+
+  &--left {
+    text-align: left;
+    // margin-bottom: 2rem;
+
+    @include respond(phone) {
+      font-size: 2.9rem;
+    }
+  }
   
 }
 
@@ -36,8 +45,62 @@
   line-height: 1;
 }
 
+.heading-background {
+  position: absolute;
+  top: -15%;
+
+  @include respond(tab-land) {
+    top: -10%;
+  }
+
+  @include respond(tab-port) {
+    top: -5%;
+  }
+}
+
+.heading-background2 {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+
+  @include respond(tab-port) {
+    left: 40%;
+  }
+
+  @include respond(phone) {
+    top: -5%;
+    left: 20%;
+  }
+}
+
+.heading-word {
+  background-color: $color-black;
+  padding: 1rem;
+  
+  position: relative;
+}
+
+.heading-text {
+  padding: .2rem 1rem;
+
+  background-color: $color-primary-dark-two;
+
+  &--absolute {
+    position: absolute;
+    top: -15%;
+  }
+}
+
+
 .paragraph {
   font-size: 1.5rem;
   margin: 2rem auto;
   // line-height: 1.2;
+
+  &--two {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
+

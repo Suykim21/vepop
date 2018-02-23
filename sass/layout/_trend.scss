@@ -1,0 +1,10 @@
+.trend {
+  margin-top: 5rem;
+  padding: 6rem;
+
+  position: relative;
+
+  @include respond(phone) {
+    padding: 3rem;
+  }
+}

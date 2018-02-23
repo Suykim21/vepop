@@ -17,6 +17,29 @@
     @include respond(tab-land) {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
+      
+      // changing order of the grid for second part
+      &--part2 div:nth-of-type(1) {
+        order:2;
+      }
+
+      &--part2 div:nth-of-type(2) {
+        order:1;
+
+        @include respond(tab-land) {
+          width: 60%;
+          margin: 0 auto;
+        }
+
+        @include respond(phone) {
+          width: 90%
+        }
+
+      }
+    }
+
+    @include respond(tab-port) {
+      margin: 1rem 0;
     }
 
 
@@ -32,6 +55,15 @@
 
       position: relative;
 
+      @include respond(tab-land) {
+        width: 65%;
+        margin: 0 auto;
+      }
+
+      @include respond(phone){
+        width: 100%;
+      }
+
       &--one {
         width: 100%;
         grid-row: 1/5;
@@ -41,6 +73,10 @@
 
         z-index: 1;
         
+        &--art {
+          grid-column: 1/5;
+          grid-row: 1/4;
+        }
       }
 
       &--two {
@@ -53,6 +89,11 @@
 
         @include respond(tab-land) {
           grid-column: 2/5;
+        }
+
+        &--bar {
+          grid-row: 4/7;
+          grid-column: 3/7;
         }
       }
 
@@ -73,7 +114,23 @@
         @include respond(phone) {
           top: -40%;
         }
+
+        &--stylish {
+          top: -100%;
+          left: 110%;
+
+          @include respond(tab-land) {
+            top: -90%;
+            left: 115%;
+          }
+
+          @include respond(phone){
+            left: 95%;
+            width: 75%;
+          }
+        }
       }
+
 
       &--line {
         grid-row:4/7;
@@ -113,4 +170,16 @@
   grid-column: 2/7;
   border-left: 1rem solid $color-primary-dark-two;
   border-bottom: 1rem solid $color-primary-dark-two;
+
+  &--two {
+    grid-row: 2/6;
+
+    @include respond(tab-land) {
+      grid-column: 1/7;
+    }
+
+    @include respond(phone) {
+      grid-column: 2/7;
+    }
+  }
 }

@@ -1,0 +1,31 @@
+.features {
+  margin-top: -10rem;
+  padding: 8rem 10rem;
+  background-image: 
+  linear-gradient(
+    to right bottom, 
+    rgba($color-black, 0.6), 
+    rgba($color-primary-dark-two, 0.6)),
+  url(../img/background_three.jpeg);
+  background-size: cover;
+  background-position: center;
+
+  transform: skewY(-7deg);
+
+  position:relative;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(phone) {
+    padding: 3rem;
+  }
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+
+}

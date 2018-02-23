@@ -1,5 +1,279 @@
 .event-box {
-  padding: 2rem;
+  // perspective need to be added on the parent element.
+  // to make it appear box flipping towards you
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  // to prevent collapse due to absolute position
+  height: 47rem;
+
+  position: relative;
+
+  &__side {
+    height: 47rem;
+    transition: all 0.8s ease;
+
+    // placing both sides in one area
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // hiding the backside hidden;
+    backface-visibility: hidden;
+
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    // to ensure edges has radius
+    // chrome shows differently
+    // overflow: hidden;
+
+    &--front {
+      background-color: $color-grey-light;
+      // transform: rotateY(180deg);
+    }
+
+    &--back {
+      // placing on the back of the box
+      transform: rotateY(180deg);
+
+      // centering through flexbox
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark-two
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-green-light,
+          $color-green-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  // hover the event-box event-box__side will flip
+  &:hover &__side--front {
+    // rotating y axis on hover
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    // flipping opposite direction
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    & img {
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark-two
+
+      );
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+      opacity: .7;
+      // background-blend-mode: screen;
+    }
+
+    &--two {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-image: linear-gradient(
+          to right bottom,
+          $color-green-light,
+          $color-green-dark
+        );
+        opacity: .7;
+        // background-blend-mode: screen;
+      }
+    }
+
+    &--three {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+        opacity: .7;
+        // background-blend-mode: screen;
+      }
+    }
+
+    &--four {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+        opacity: .7;
+        // background-blend-mode: screen;
+      }
+    }
   
-  border: 2px solid black;
+  
+  
+
+    &--one,
+    &--two,
+    &--three,
+    &--four {
+      height: 22rem;
+      width: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    }
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+
+    // applies all the decorators
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($color-primary-light, .65), rgba($color-primary-dark-two, .65));
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba($color-green-light, .65), rgba($color-green-dark, .65));
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .65), rgba($color-secondary-dark, .65));
+    }
+
+    &--4 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .65), rgba($color-tertiary-dark, .65));
+    }
+  }
+
+  &__details {
+    padding: 0 1rem;
+  }
+
+  &__date {
+    padding: .5rem;
+    margin-bottom: 0;
+
+    font-weight: 700;
+    color: $color-white;
+    background-color: $color-black;
+
+    display: inline-block;
+  }
+
+  &__link {
+    position: absolute;
+    top: 96%;
+    left: 100%;
+    transform: translate(-100%, -96%);
+
+    background-color: $color-primary-dark-two;
+    border: none;
+
+    color: $color-white;
+    font-size: 2rem;
+    padding: .3rem 2rem;
+  }
+
+  // BACK SIDE STYLING
+
+  &__price-box {
+    margin-bottom: 6rem;
+    color: $color-white;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 300;
+    font-family: $font-heading;
+  }
 }

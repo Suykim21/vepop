@@ -168,6 +168,8 @@ a {
     margin: 0;
     text-transform: uppercase;
     font-weight: 700; }
+  .paragraph--small {
+    font-size: 1.3rem; }
 
 .button {
   display: inline-block;
@@ -186,9 +188,199 @@ a {
       color: #fff;
       margin-top: 1rem; } }
 
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #f7f7f7;
+  color: #E5394F;
+  font-size: 1.3rem; }
+  .btn--white::after {
+    background-color: #f7f7f7; }
+  .btn--white-green {
+    color: #2ECC40; }
+  .btn--white-secondary {
+    color: #ff7730; }
+  .btn--white-tertiary {
+    color: #5643fa; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
 .event-box {
-  padding: 2rem;
-  border: 2px solid black; }
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 47rem;
+  position: relative; }
+  .event-box__side {
+    height: 47rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .event-box__side--front {
+      background-color: #f7f7f7; }
+    .event-box__side--back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+      .event-box__side--back-1 {
+        background-image: linear-gradient(to right bottom, #E5394F, #f01737); }
+      .event-box__side--back-2 {
+        background-image: linear-gradient(to right bottom, #01FF70, #2ECC40); }
+      .event-box__side--back-3 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .event-box__side--back-4 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .event-box:hover .event-box__side--front {
+    transform: rotateY(-180deg); }
+  .event-box:hover .event-box__side--back {
+    transform: rotateY(0); }
+  .event-box__picture {
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .event-box__picture img {
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem; }
+    .event-box__picture::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: linear-gradient(to right bottom, #E5394F, #f01737);
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+      opacity: .7; }
+    .event-box__picture--two::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: linear-gradient(to right bottom, #01FF70, #2ECC40);
+      opacity: .7; }
+    .event-box__picture--three::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+      opacity: .7; }
+    .event-box__picture--four::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+      opacity: .7; }
+    .event-box__picture--one, .event-box__picture--two, .event-box__picture--three, .event-box__picture--four {
+      height: 22rem;
+      width: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+  .event-box__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .event-box__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .event-box__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(229, 57, 79, 0.65), rgba(240, 23, 55, 0.65)); }
+    .event-box__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(1, 255, 112, 0.65), rgba(46, 204, 64, 0.65)); }
+    .event-box__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.65), rgba(255, 119, 48, 0.65)); }
+    .event-box__heading-span--4 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.65), rgba(86, 67, 250, 0.65)); }
+  .event-box__details {
+    padding: 0 1rem; }
+  .event-box__date {
+    padding: .5rem;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #fff;
+    background-color: #000;
+    display: inline-block; }
+  .event-box__link {
+    position: absolute;
+    top: 96%;
+    left: 100%;
+    transform: translate(-100%, -96%);
+    background-color: #f01737;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: .3rem 2rem; }
+  .event-box__price-box {
+    margin-bottom: 6rem;
+    color: #fff; }
+  .event-box__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .event-box__price-value {
+    font-size: 6rem;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif; }
 
 .feature-box {
   background: rgba(255, 255, 255, 0.4);
@@ -199,6 +391,9 @@ a {
   align-content: center;
   justify-items: center;
   transition: transform .2s; }
+  @media only screen and (max-width: 37.5em) {
+    .feature-box:nth-child(2) {
+      margin: 1.5rem 0; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -582,3 +777,6 @@ a {
   @media only screen and (max-width: 37.5em) {
     .trend {
       padding: 3rem; } }
+
+.center {
+  text-align: center; }

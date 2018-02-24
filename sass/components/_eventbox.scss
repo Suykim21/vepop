@@ -5,7 +5,7 @@
   -moz-perspective: 150rem;
 
   // to prevent collapse due to absolute position
-  height: 47rem;
+  height: 50rem;
 
   position: relative;
 
@@ -247,16 +247,22 @@
 
   &__link {
     position: absolute;
-    top: 96%;
-    left: 100%;
+    top: 95.5%;
+    left: 100.5%;
     transform: translate(-100%, -96%);
 
     background-color: $color-primary-dark-two;
     border: none;
 
+    border-bottom-right-radius: 1rem;
+
     color: $color-white;
     font-size: 2rem;
     padding: .3rem 2rem;
+
+    @include respond(phone) {
+      top: 98%;
+    }
   }
 
   // BACK SIDE STYLING

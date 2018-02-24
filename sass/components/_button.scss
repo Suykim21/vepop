@@ -134,3 +134,29 @@
 //       transform: translateY(0);
 //   }
 // }
+
+////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+    border: none;
+    color: $color-primary-light;
+    font-size: inherit;
+    padding-bottom: .2rem;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: .3rem;
+        transition: margin-left .2s;
+    }
+
+    &:hover {
+        color: $color-black-light;
+
+        span {
+            margin-left: .8rem;
+        }
+    }
+}

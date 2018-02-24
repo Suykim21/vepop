@@ -36,22 +36,29 @@ body {
   margin: -7rem auto 0 auto;
   background-color: $color-white;
 
-  &--red {
-    background: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.6),
-      rgba($color-primary-dark-two, 0.8)
-    );
-
-    height: 150rem;
-  }
-
   @include respond(phone) {
     margin: 0 auto;
   }
 
   @include respond(tab-port) {
     transform: translateX(0);
+  }
+}
+
+.wrapper {
+  display: grid;
+  max-width: 120rem;
+  grid-template-rows: 1fr;
+  margin: -7rem auto 0 auto;
+  background-color: $color-white;
+  background: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.6),
+    rgba($color-primary-dark-two, 0.8)
+  );
+
+  @include respond(phone) {
+    margin: 0 auto;
   }
 }
 

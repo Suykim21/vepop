@@ -1,5 +1,132 @@
 .events {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-  grid-gap: 2rem; 
+  grid-gap: 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 2rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+
+////////////////////////////////////////
+// SEARCH
+.search {
+  flex: 0 0 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    margin-top: 2rem;
+
+    order: 1;
+    flex: 0 0 100%;
+    // background-color: var(--color-grey-light-2);
+  }
+
+  &__input {
+    font-family: $font-primary;
+    font-size: 2rem;
+    color: $color-black;
+    background-color: transparent;
+    border: 3px solid black;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    // putting svg icon inside the input
+    margin-right: -3.25rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $color-white;
+      border: 3px solid $color-primary-dark-two;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 300;
+      color: $color-black;
+    }
+  }
+
+  &__input:focus + &__button > &__icon {
+    fill: $color-primary-dark-two;
+    // background-color: $color-primary-dark-two;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: black;
+  }
+}
+
+.sort {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1rem, 1fr));
+
+  @include respond(phone) {
+    margin: 3rem;
+  }
+
+  &__item {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    padding: .8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    &:nth-child(1) {
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+
+    &:nth-child(3) {
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    &:nth-child(4) {
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+    }
+  }
+}
+
+#sort__picked {
+  background: $color-black;
+  color: $color-white;
 }

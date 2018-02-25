@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "art show",
+    "url": "img/art_eleven.jpg",
+    "date": "Feb 27",
+    "location": "culver city, ca",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam.",
+    "price": 29
+  },
+  {
+    "id": 2,
+    "title": "rodrigo y gabriela",
+    "url": "img/concert_two.jpg",
+    "date": "Feb 29",
+    "location": "arts district, ca",
+    "description": "Ipsum dolor sit amet consectetur adipisicing elit. Non illum ratione quam quas asperiores mollitia inventore quasi ipsam tenetur fugiat.",
+    "price": 15
+  },
+  {
+    "id": 3,
+    "title": "fashion show",
+    "url": "img/art_two.jpg",
+    "date": "Mar 5",
+    "location": "santa monica, ca",
+    "description": "Mollitia eveniet dolor sit amet consectetur, adipisicing elit. Neque maxime aut mollitia eveniet, eos laudantium velit blanditiis nisi natus eius!",
+    "price": 34
+  },
+  {
+    "id": 4,
+    "title": "brewery tour",
+    "url": "img/restaurant.jpg",
+    "date": "Mar 14",
+    "location": "torrance, ca",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sit minima velit animi dolor voluptatibus consectetur.",
+    "price": 35
+  },
+  {
+    "id": 5,
+    "title": "chill central",
+    "url": "img/bar_six.jpg",
+    "date": "Apr 4",
+    "location": "santa monica, ca",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis aliquam adipisci officia distinctio iste soluta velit voluptas suscipit!",
+    "price": 21
+  },
+  {
+    "id": 6,
+    "title": "holy cow",
+    "url": "img/burger.jpg",
+    "date": "Apr 1",
+    "location": "santa barbara, ca",
+    "description": "Quibusdam ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 20
+  },
+  {
+    "id": 7,
+    "title": "coffee + book",
+    "url": "img/coffee_four.jpg",
+    "date": "Mar 4",
+    "location": "altadena, ca",
+    "description": "Voremp ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 10
+  },
+  {
+    "id": 8,
+    "title": "diplo",
+    "url": "img/dj_two.jpg",
+    "date": "Mar 18",
+    "location": "west hollywood, ca",
+    "description": "Ceul ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam.",
+    "price": 30
+  },
+  {
+    "id": 9,
+    "title": "whisky night",
+    "url": "img/bar_two.jpg",
+    "date": "Mar 10",
+    "location": "little toyko, ca",
+    "description": "Maiores, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 25
+  },
+  {
+    "id": 10,
+    "title": "modern art",
+    "url": "img/art_thirteen.jpg",
+    "date": "Feb 28",
+    "location": "downtown la, ca",
+    "description": "Saepe dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 10
+  },
+  {
+    "id": 11,
+    "title": "skate show",
+    "url": "img/background_five.jpg",
+    "date": "Mar 17",
+    "location": "venice, ca",
+    "description": "Doloremque voluptas ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 15
+  },
+  {
+    "id": 12,
+    "title": "disco fever",
+    "url": "img/dj_one.jpg",
+    "date": "Mar 25",
+    "location": "silver lake, ca",
+    "description": "Adipisicing dolor, sit amet consectetur elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam maiores quibusdam.",
+    "price": 25
+  }
+]

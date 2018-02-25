@@ -3,6 +3,14 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 26rem));
   grid-gap: 2rem;
 
+  @include respond(tab-land) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 27rem));
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 29rem));
+  }
+
   @include respond(phone) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }

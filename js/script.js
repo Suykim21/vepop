@@ -103,7 +103,7 @@ function removeClass() {
   }
 }
 
-// TEST
+// LOADING JSON EVENTS FILE
 function loadEvents(e){
   const xhr = new XMLHttpRequest();
   xhr.open('GET', 'events.json', true);
@@ -111,13 +111,14 @@ function loadEvents(e){
   xhr.onload = function() {
     console.log(this);
     if (this.status === 200) {
-      
-      const events = JSON.parse(this.responseText);
 
+      const events = JSON.parse(this.responseText);
+    
       let output = '';
 
       events.forEach((event) => {
         // +=, to append all events
+        
         output += `
         <li class="event-box">
           <div class="event-box__side event-box__side--front">

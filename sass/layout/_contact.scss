@@ -1,0 +1,124 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+  @include respond(phone) {
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  }
+
+  height: 100%;
+
+  &__group {
+    position: relative;
+    height: 100%;
+  }
+
+  &__image,
+  &__image:after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+    @include respond(tab-port) {
+      position: unset;
+    }
+  }
+
+  &__image:after {
+    content: '';
+    background: transparent url(../img/pattern.png) repeat top left;
+  }
+
+  &__text {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-purple-light, 0.7),
+        rgba($color-purple, 0.7)),
+    url(../img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      padding: 1.5rem;
+    }
+  }
+
+
+  &__cta {
+    background-color: $color-grey-light;
+    padding: 2rem;
+    
+   
+  }
+
+  &__textbox {
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: .75rem;  
+
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+    & div {
+      margin: 0;
+
+      @include respond(phone) {
+        margin: 2rem auto;
+      }
+    }
+
+    & input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    @include respond(phone) {
+     display: block;
+    }
+  }
+}
+
+.full {
+  grid-column: 1/3;
+}
+
+input,
+label,
+textarea {
+  display: block;
+  border: none;
+  outline: none;
+  
+}
+
+input,
+textarea {
+  border-bottom: 2px solid $color-black;
+  transition: all .2s;
+  font-size: 1.5rem;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid $color-primary-light;
+}

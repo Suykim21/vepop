@@ -133,6 +133,16 @@
     margin: 0 auto;
     height: 8rem;
   }
+
+  &--two {
+    height: 9rem;
+    margin-left: 0;
+
+    @include respond(phone) {
+      margin: 0;
+    }
+  }
+
 }
 
 // USER NAVIGATION

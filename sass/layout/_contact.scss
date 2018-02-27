@@ -102,6 +102,19 @@
   grid-column: 1/3;
 }
 
+.error {
+  border: 2px solid red;
+}
+
+.message,
+.message2,
+.message3,
+.message4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: red;
+}
+
 input,
 label,
 textarea {
@@ -111,14 +124,20 @@ textarea {
   
 }
 
-input,
-textarea {
+input {
   border-bottom: 2px solid $color-black;
   transition: all .2s;
   font-size: 1.5rem;
 }
 
-input:focus,
-textarea:focus {
+textarea {
+  border: 2px solid $color-black;
+}
+
+input:focus {
   border-bottom: 2px solid $color-primary-light;
+}
+
+textarea:focus {
+  border: 2px solid $color-primary-light;
 }

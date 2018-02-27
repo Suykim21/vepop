@@ -9,6 +9,7 @@ const navBar = document.querySelector(".user-nav");
 const sortParent = document.querySelector(".sort");
 const sortButtons = document.querySelectorAll(".sort li");
 
+
 // EVENTS
 const eventPage = document.getElementById("events");
 
@@ -45,6 +46,67 @@ navBar.onclick = e => {
     container.classList.remove("add_margins");
   }
 };
+
+///////////////////////////////////////////////////////////////////////
+// FORM VALIDATIONS
+document.getElementById('name').addEventListener('blur', validateName);
+document.getElementById('email').addEventListener('blur', validateEmail);
+document.getElementById('phone').addEventListener('blur', validatePhone);
+document.getElementById('message').addEventListener('blur', validateMessage);
+const msg = document.querySelector('.message');
+const msg2 = document.querySelector('.message2');
+const msg3 = document.querySelector('.message3');
+const msg4 = document.querySelector('.message4');
+
+console.log(msg);
+function validateName() {
+  const name = document.getElementById('name');
+  const re = /^[a-zA-Z ]+$/;
+
+  if(!re.test(name.value) || name.value.length == 0) {
+    msg.innerHTML = "name must be filled only in letters";
+  } 
+
+  else {
+    msg.innerHTML = "";
+  }
+}
+
+function validateEmail() {
+  const email = document.getElementById('email');
+  const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+  if(!re.test(email.value) || email.value.length == 0) {
+    msg2.innerHTML = "valid email must be filled";
+  } 
+
+  else {
+    msg2.innerHTML = "";
+  }
+}
+
+function validatePhone() {
+  const phone = document.getElementById('phone');
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+
+  if (!re.test(phone.value) || phone.value.length == 0) {
+    msg3.innerHTML = "valid phone numbers must be filled";
+  }
+  else {
+    msg3.innerHTML = "";
+  }
+}
+
+function validateMessage() {
+  const message = document.getElementById('message');
+
+  if (message.value == '') {
+    msg4.innerHTML = "message cannot be blank";
+  }
+  else {
+    msg4.innerHTML = "";
+  }
+}
 
 // FILTERING THE LIST
 
@@ -121,7 +183,8 @@ function loadEvents(dataSortBtn) {
 
       function loadInfo(events) {
         let output = "";
-        events.forEach(event => {
+        events.forEach(event=> {
+
           output += `
             <li class="event-box">
               <div class="event-box__side event-box__side--front">
@@ -146,14 +209,15 @@ function loadEvents(dataSortBtn) {
                 <div class="event-box__cta">
                   <div class="event-box__price-box">
                     <p class="event-box__price-only">Only</p>
-                    <p class="event-box__price-value">${event.price}</p>
+                    <p class="event-box__price-value">$${event.price}</p>
                   </div>
                   <a href="#" class="btn btn--white">details</a>
                 </div>
               </div>
             </li>
             `;
-        });
+        
+        }); 
 
         eventPage.innerHTML = output;
       }
@@ -197,3 +261,11 @@ function loadEvents(dataSortBtn) {
 }
 
 window.onload = loadEvents;
+
+///////////////////////////////////////////////////////////////////////
+
+
+
+// const name = document.getElementById('name');
+
+// console.log(name);

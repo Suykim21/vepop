@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "title": "art show",
-    "url": "img/art_eleven.jpg",
-    "date": "Feb 27",
-    "location": "culver city, ca",
-    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam.",
-    "price": 29
+    "title": "chill central",
+    "url": "img/bar_six.jpg",
+    "date": "Apr 4",
+    "location": "santa monica, ca",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis aliquam adipisci officia distinctio iste soluta velit voluptas suscipit!",
+    "price": 21
   },
   {
     "id": 2,
@@ -37,12 +37,12 @@
   },
   {
     "id": 5,
-    "title": "chill central",
-    "url": "img/bar_six.jpg",
-    "date": "Apr 4",
-    "location": "santa monica, ca",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis aliquam adipisci officia distinctio iste soluta velit voluptas suscipit!",
-    "price": 21
+    "title": "art show",
+    "url": "img/art_eleven.jpg",
+    "date": "Feb 27",
+    "location": "culver city, ca",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit doloremque voluptas consectetur saepe voluptate. Maxime magnam laudantium corrupti quisquam.",
+    "price": 29
   },
   {
     "id": 6,

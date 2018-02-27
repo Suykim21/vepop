@@ -10,7 +10,7 @@ const sortParent = document.querySelector(".sort");
 const sortButtons = document.querySelectorAll(".sort li");
 
 // EVENTS
-const eventPage = document.getElementById('events');
+const eventPage = document.getElementById("events");
 
 navToggle.addEventListener("click", _ => {
   container.classList.toggle("add_margins");
@@ -78,19 +78,6 @@ function filterNames() {
   }
 }
 
-// SORT
-sortParent.onclick = e => {
-  let target = e.target;
-
-  if (target.id == "sort__picked") {
-    // console.log(target.classList.contains('value'));
-    return;
-  } else {
-    sortButtons.forEach(btn => btn.removeAttribute("id"));
-    target.setAttribute("id", "sort__picked");
-  }
-};
-
 // SCREEN SIZE CHANGES
 window.addEventListener("resize", removeClass);
 
@@ -103,55 +90,107 @@ function removeClass() {
   }
 }
 
+///////////////////////////////////////////////////////////////////////
+// EVENT - SORT ALGORITHMS
+
+// SORT
+sortParent.onclick = e => {
+  let target = e.target;
+
+  if (target.id == "sort__picked") {
+    // console.log(target.classList.contains("value"));
+    loadEvents(target);
+  } else {
+    loadEvents(target);
+    sortButtons.forEach(btn => btn.removeAttribute("id"));
+    target.setAttribute("id", "sort__picked");
+  }
+};
+
 // LOADING JSON EVENTS FILE
-function loadEvents(e){
+function loadEvents(dataSortBtn) {
+  // console.log(dataSortBtn);
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'events.json', true);
+  xhr.open("GET", "events.json", true);
 
   xhr.onload = function() {
-    console.log(this);
+    // console.log(this);
     if (this.status === 200) {
+      var events = JSON.parse(this.responseText);
+      loadInfo(events);
 
-      const events = JSON.parse(this.responseText);
-    
-      let output = '';
-
-      events.forEach((event) => {
-        // +=, to append all events
-        
-        output += `
-        <li class="event-box">
-          <div class="event-box__side event-box__side--front">
-            <div class="event-box__picture">
-              <img src="${event.url}" alt="art eleven" class="event-box__picture--one">
-            </div>
-            <h4 class="event-box__heading">
-              <span class="event-box__heading-span event-box__heading-span--1">${event.title}</span>
-            </h4>
-            <div class="event-box__details">
-              <p class="paragraph event-box__date">${event.date}</p>
-              <p class="location">${event.location}</p>
-              <p class="paragraph paragraph--small">${event.description}</p>
-              <a href="#" class="button event-box__link">&#10596;</a>
-            </div>
-          </div>
-          <div class="event-box__side event-box__side--back event-box__side--back-1">
-            <div class="event-box__cta">
-              <div class="event-box__price-box">
-                <p class="event-box__price-only">Only</p>
-                <p class="event-box__price-value">${event.price}</p>
+      function loadInfo(events) {
+        let output = "";
+        events.forEach(event => {
+          output += `
+            <li class="event-box">
+              <div class="event-box__side event-box__side--front">
+                <div class="event-box__picture">
+                  <img src="${
+                    event.url
+                  }" alt="art eleven" class="event-box__picture--one">
+                </div>
+                <h4 class="event-box__heading">
+                  <span class="event-box__heading-span event-box__heading-span--1">${
+                    event.title
+                  }</span>
+                </h4>
+                <div class="event-box__details">
+                  <p class="paragraph event-box__date">${event.date}</p>
+                  <p class="location location--black">${event.location}</p>
+                  <p class="paragraph paragraph--small">${event.description}</p>
+                  <a href="#" class="button event-box__link">&#10596;</a>
+                </div>
               </div>
-              <a href="#" class="btn btn--white">details</a>
-            </div>
-          </div>
-        </li>
-        `
-      })
-      
-      eventPage.innerHTML = output;
+              <div class="event-box__side event-box__side--back event-box__side--back-1">
+                <div class="event-box__cta">
+                  <div class="event-box__price-box">
+                    <p class="event-box__price-only">Only</p>
+                    <p class="event-box__price-value">${event.price}</p>
+                  </div>
+                  <a href="#" class="btn btn--white">details</a>
+                </div>
+              </div>
+            </li>
+            `;
+        });
 
-    } else {
-      console.log("failed");
+        eventPage.innerHTML = output;
+      }
+
+      if (dataSortBtn.classList.contains("value")) {
+        // console.log(events);
+        let value = events.sort((a, b) => a.price - b.price);
+        var events = value;
+        loadInfo(events);
+      }
+
+      if (dataSortBtn.classList.contains("premium")) {
+        let premium = events.sort((a, b) => b.price - a.price);
+        var events = premium;
+        loadInfo(events);
+      }
+
+      if (dataSortBtn.classList.contains("az")) {
+        let az = events.sort((a, b) => {
+          if (a.title < b.title) return -1;
+          else if (a.title > b.title) return 1;
+          return 0;
+        });
+
+        var events = az;
+        loadInfo(events);
+      }
+
+      if (dataSortBtn.classList.contains("za")) {
+        let za = events.sort((a, b) => {
+          if (a.title > b.title) return -1;
+          else if (a.title < b.title) return 1;
+          return 0;
+        });
+        var events = za;
+        loadInfo(events);
+      }
     }
   };
   xhr.send();

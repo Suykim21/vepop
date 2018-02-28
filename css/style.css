@@ -837,6 +837,11 @@ button {
 .full {
   grid-column: 1/3; }
 
+.alert {
+  font-size: 1.5rem;
+  color: #2ECC40;
+  display: none; }
+
 .error {
   border: 2px solid red; }
 
@@ -861,7 +866,9 @@ input {
   font-size: 1.5rem; }
 
 textarea {
-  border: 2px solid #000; }
+  border: 2px solid #000;
+  font-size: 1.4rem;
+  transition: all .2s; }
 
 input:focus {
   border-bottom: 2px solid #E5394F; }

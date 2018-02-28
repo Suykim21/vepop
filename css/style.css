@@ -44,6 +44,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     opacity: 0; } }
 
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards; }
+
 *,
 *::before,
 *::after {
@@ -473,26 +482,31 @@ button {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .popup {
-  height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 99999999;
   display: flex;
   align-items: center;
   justify-content: center; }
   .popup__content {
-    max-width: 75%;
+    width: 90%;
     min-height: 50rem;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-    border-radius: .3rem; }
+    border-radius: 0.3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .popup__content {
+        width: 95%; } }
+    @media only screen and (max-width: 37.5em) {
+      .popup__content {
+        border-radius: 0;
+        width: 100%;
+        position: relative; } }
   .popup__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-gap: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__grid {
+        grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr)); } }
   .popup__pics {
     margin: 1rem; }
 
@@ -503,12 +517,19 @@ button {
 .imgs {
   display: grid;
   grid-template-columns: repeat(3, minmax(5rem, 1fr));
-  grid-gap: .5rem; }
+  grid-gap: 0.5rem; }
 
 .recommend {
   font-size: 1.3rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin: 0 auto; }
+  @media only screen and (max-width: 56.25em) {
+    .recommend {
+      order: 1; } }
+  @media only screen and (max-width: 37.5em) {
+    .recommend {
+      margin: 1rem; } }
   .recommend__count {
     margin-right: auto; }
   .recommend__friends {
@@ -526,15 +547,31 @@ button {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f7f7f7; }
+  @media only screen and (max-width: 56.25em) {
+    .overview {
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 37.5em) {
+    .overview {
+      margin-top: 11rem; } }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 72.5em) {
+      .overview__heading {
+        padding: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        padding: 1rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__stars {
+        margin-right: 1rem;
+        margin-left: auto; } }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
@@ -543,18 +580,27 @@ button {
     font-size: 1.2rem;
     display: flex;
     vertical-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__location {
+        margin-left: 1rem;
+        order: 1; } }
   .overview__icon-location {
-    margin-right: .5rem; }
+    margin-right: 0.5rem; }
   .overview__rating {
     background-color: #f01737;
     color: #fff;
-    margin-left: 3rem;
+    margin-left: 2rem;
     padding: 0 2.25rem;
     align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        margin-left: auto;
+        margin-right: 1rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     margin-bottom: -3px; }
@@ -571,13 +617,13 @@ button {
   flex-wrap: wrap; }
   .list__item {
     flex: 0 0 50%;
-    margin-bottom: .7rem; }
+    margin-bottom: 0.7rem; }
   .list__item::before {
     content: "";
     display: inline-block;
     height: 1rem;
     width: 1rem;
-    margin-right: .7rem;
+    margin-right: 0.7rem;
     background-image: url(../img/SVG/chevron-thin-right.svg);
     background-size: cover; }
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
@@ -618,7 +664,7 @@ button {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: .4rem; }
+    margin-bottom: 0.4rem; }
   .review__user-date {
     font-size: 1rem;
     color: #323B3C; }
@@ -630,12 +676,15 @@ button {
     content: "\201C";
     position: absolute;
     top: -0.75rem;
-    left: -.65rem;
+    left: -0.65rem;
     line-height: 1;
     font-size: 15rem;
     color: #ccc;
     font-family: sans-serif;
     z-index: 1; }
+
+.details {
+  margin: 1rem; }
 
 .social {
   visibility: hidden;
@@ -1056,6 +1105,9 @@ textarea:focus {
     .navigation__button {
       display: block; } }
 
+.navigation--red {
+  background-color: #A6293B; }
+
 .navigation__checkbox:checked ~ .nav {
   transform: translateX(0); }
 
@@ -1136,6 +1188,14 @@ textarea:focus {
     @media only screen and (max-width: 37.5em) {
       .logo--two {
         margin: 0; } }
+  .logo--three {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .logo--three {
+        display: block;
+        position: absolute;
+        top: 2%;
+        left: 2%; } }
 
 .user-nav {
   align-self: stretch;

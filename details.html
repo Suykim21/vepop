@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Vepop - Details</title>
+</head>
+
+<body>
+
+  <div class="popup"> 
+    <div class="popup__content">
+      <img src="img/favicon.png" alt="vepop logo" class="logo logo--three"> 
+      <div class="navigation navigation--red">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="nav">
+          <img src="img/favicon.png" alt="vepop logo" class="logo">
+          <nav class="user-nav">
+            <div class="user-nav__icon-box ">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-home"></use>
+              </svg>
+              <a href="index.html" class="user-nav__user-name">Home</a>
+              <!-- <span class="user-nav__user-name">Home</span> -->
+            </div>
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+              <span class="user-nav__user-name">About</span>
+            </div>
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-map"></use>
+              </svg>
+              <a href="events.html" class="user-nav__user-name">Events</a>
+              <!-- <span class="user-nav__user-name">Events</span> -->
+            </div>
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+              </svg>
+              <span class="user-nav__notification">7</span>
+              <span class="user-nav__user-name nav-text">Bookmarks</span>
+            </div>
+            <div class="user-nav__icon-box">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+              <span class="user-nav__notification">13</span>
+              <span class="user-nav__user-name nav-text">Messages</span>
+
+            </div>
+            <div class="user-nav__user">
+              <img src="img/user-6.jpg" alt="User photo" class="user-nav__user-photo">
+              <span class="user-nav__user-name">Jessica</span>
+            </div>
+            <div class="user-nav__icon-box social">
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+              <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-chat"></use>
+              </svg>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="overview">
+        <h1 class="overview__heading">
+          Art Show
+        </h1>
+
+        <div class="overview__stars">
+          <svg class="overview__icon-star">
+            <use xlink:href="img/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="img/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="img/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="img/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="img/sprite.svg#icon-star"></use>
+          </svg>
+        </div>
+
+        <div class="recommend">
+          <p class="recommend__count">
+            Jessica and 3 other friends recommend this hotel.
+          </p>
+          <div class="recommend__friends">
+            <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
+            <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
+            <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
+            <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
+          </div>
+        </div>
+
+        <div class="overview__location">
+          <svg class="overview__icon-location">
+            <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+          </svg>
+          <button class="btn-inline">culver city, ca</button>
+        </div>
+
+        <div class="overview__rating">
+          <div class="overview__rating-average">8.3</div>
+          <div class="overview__rating-count">734 votes</div>
+        </div>
+      </div>
+
+      <div class="popup__grid">
+        <div class="popup__pics">
+          <div class="main">
+            <img src="img/art_eleven.jpg" alt="main pic" id="current">
+          </div>
+          <div class="imgs">
+            <img src="img/art_eleven.jpg">
+            <img src="img/art_seven.jpg">
+            <img src="img/dj_two.jpg">
+            <img src="img/drinks_one.jpeg">
+            <img src="img/women_three.jpg">
+            <img src="img/women_two.jpg">
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="details__flex">
+            <div class="details__box">
+              <h2 class="heading-two heading-two--left">details</h2>
+              <p class="paragraph paragraph--small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sint eum quod explicabo, cupiditate et laborum
+                tenetur suscipit excepturi sequi sit autem repellat sunt, ratione inventore minus modi alias ipsa hic molestiae
+                in. Itaque quo praesentium repellendus cupiditate temporibus tenetur quis at accusamus maiores doloribus.</p>
+              <h4 class="heading-four">exclusive vepop deals</h4>
+              <ul class="list">
+                <li class="list__item paragraph paragraph--smmargin">buy one get one free</li>
+                <li class="list__item paragraph paragraph--smmargin">second event 50% off</li>
+                <li class="list__item paragraph paragraph--smmargin">open bar for vepop members</li>
+                <li class="list__item paragraph paragraph--smmargin">backstage access</li>
+              </ul>
+            </div>
+
+            <div class="reviews">
+              <figure class="user-reviews">
+                <figure class="review">
+                  <blockquote class="review__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+                  </blockquote>
+                  <figcaption class="review__user">
+                    <img src="img/user-1.jpg" alt="User 1" class="review__photo">
+                    <div class="review__user-box">
+                      <p class="review__user-name">Nick Smith</p>
+                      <p class="review__user-date">Feb 23rd, 2017</p>
+                    </div>
+                    <div class="review__rating">7.8</div>
+                  </figcaption>
+                </figure>
+
+                <figure class="review">
+                  <blockquote class="review__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+                  </blockquote>
+                  <figcaption class="review__user">
+                    <img src="img/user-2.jpg" alt="User 1" class="review__photo">
+                    <div class="review__user-box">
+                      <p class="review__user-name">Mary Thomas</p>
+                      <p class="review__user-date">Sept 13th, 2017</p>
+                    </div>
+                    <div class="review__rating">9.3</div>
+                  </figcaption>
+                </figure>
+            </div>
+
+            <button class="btn-inline">Show all
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+
+</html>

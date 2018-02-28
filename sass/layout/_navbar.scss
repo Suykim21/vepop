@@ -25,6 +25,10 @@
     }
   }
 
+  &--red {
+    background-color: $color-primary-dark;
+  }
+
   // FUNCTIONALITY
   &__checkbox:checked ~ .nav {
     transform: translateX(0);
@@ -140,6 +144,17 @@
 
     @include respond(phone) {
       margin: 0;
+    }
+  }
+
+  &--three {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      position: absolute;
+      top: 2%;
+      left: 2%;
     }
   }
 

@@ -454,34 +454,30 @@
         <div class="contact__textbox">
           <h3 class="heading-two heading-two--left">Say hello</h3>
           <p class="paragraph paragraph--smmargin">Get in touch with our team and find out what makes us different.</p>
-          <form action="#" class="contact__form">
+          <div class="alert">Successfully Sent! Thank you!</div>
+          <form action="#" class="contact__form" id="contact-form">
             <div class="paragraph">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required>
               <div class="message"></div>
             </div>
-            <!-- <div class="paragraph">
-              <label for="company">Company</label>
-              <input type="text" name="company" id="company">
-              <div class="message"></div>
-            </div> -->
             <div class="paragraph">
               <label for="Email">Email</label>
-              <input type="email" name="email" id="email">
+              <input type="email" name="email" id="email" required>
               <div class="message2"></div>
             </div>
             <div class="paragraph">
               <label for="phone">Phone Number</label>
-              <input type="text" name="phone" id="phone">
+              <input type="text" name="phone" id="phone" required>
               <div class="message3"></div>
             </div>
             <div class="paragraph full">
               <label for="message">Message</label>
-              <textarea name="message" rows="5" id="message"></textarea>
+              <textarea name="message" rows="5" id="message" required></textarea>
               <div class="message4"></div>
             </div>
             <div class="paragraph full">
-              <button class="button">Submit</button>
+              <button type="submit" class="button" id="button">Submit</button>
             </div>
           </form>
         </div>
@@ -493,6 +489,7 @@
 
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script src="js/script.js"></script>
 </body>
 

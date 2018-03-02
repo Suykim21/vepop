@@ -59,6 +59,7 @@
 
     &::before {top: -.8rem;}
     &::after {top: .8rem;}
+
   }
 
   &__button:hover &__icon::before {
@@ -97,7 +98,7 @@
   align-items: center;
 
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 100%;
 
   @include respond(phone) {
     flex-direction: column;
@@ -158,6 +159,10 @@
     }
   }
 
+  &--footer {
+    margin-left: 0;
+  }
+
 }
 
 // USER NAVIGATION
@@ -214,6 +219,13 @@
       height: 2.25rem;
       width: 2.25rem;
       fill: $color-white;
+
+      &--footer {
+        transition: transform .2s ease-in-out;
+          &:hover {
+            transform: scale(1.5);
+          }
+      }
   }
 
   &__notification {

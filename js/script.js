@@ -162,6 +162,7 @@ function loadEvents(dataSortBtn) {
 
       if (dataSortBtn.classList.contains("value")) {
         // console.log(events);
+        console.log(dataSortBtn.innerHTML);
         let value = events.sort((a, b) => a.price - b.price);
         var events = value;
         loadInfo(events);

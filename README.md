@@ -10,7 +10,7 @@ After you have successfully installed all packages listed on package.json, pleas
 
 ## Live Demo
 
-* Will deploy soon.
+[Live Demo](https://suykim21.github.io/vepop/)
 
 ## Resources
 - [BEM - Block Element Modifier](http://getbem.com/introduction/) </br>

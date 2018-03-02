@@ -1104,8 +1104,7 @@ textarea:focus {
     opacity: 1;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
-    animation: imageAnimation 40s linear infinite 0s; }
+    background-repeat: none; }
 
 .location {
   color: #fff; }

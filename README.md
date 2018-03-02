@@ -26,7 +26,7 @@ After you have successfully installed all packages listed on package.json, pleas
 ## Home
 Mobile | Desktop 
 :---------------:|:--------------:
-<img src="https://user-images.githubusercontent.com/25072657/36890173-d4a6d2ee-1db1-11e8-92ce-7e0f6fa4bd9e.png" width="200px"> | <img src="https://user-images.githubusercontent.com/25072657/36890548-31cdcd46-1db3-11e8-83e7-96525b187400.png" width="850px"> 
+<img src="https://user-images.githubusercontent.com/25072657/36890173-d4a6d2ee-1db1-11e8-92ce-7e0f6fa4bd9e.png" width="200px"> | <img src="https://user-images.githubusercontent.com/25072657/36890780-08aff2c6-1db4-11e8-99b6-97cb07302fbd.png" width="850px"> 
 
 ## Events
 Mobile | Desktop 

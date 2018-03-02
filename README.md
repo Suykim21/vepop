@@ -1,5 +1,5 @@
 # Vepop
-Vepop is a fictitious responsive events/tourism website, I structured the project based around BEM and SASS 7-1 Pattern methodologies. It is made purely from html, css/scss, and vanilla javascript(es6) connecting cloud-hosted noSQL database: firebase. Sorting algorithms has been implemented when filtering for specific events such as expensive-affordable and A-Z etc.
+Vepop is a fictitious responsive events/tourism website, I structured the project based around BEM and SASS 7-1 Pattern methodologies. It is made purely from html, css/scss(w/css-grid & css flexbox), and vanilla javascript(es6) connecting cloud-hosted noSQL database: firebase. Sorting algorithms has been implemented when filtering for specific events such as expensive-affordable and A-Z etc.
 I used AJAX - The XMLHttpRequest Object to pull out local json file to manipulate user desired sort and/or filter on events.html. I used Regex when doing validations on user input and once all conditions are passed it would directly store data onto firebase real time. Lastly, SVG Icons were used through icomoon.io.
 
 ## Prerequisites/Installing

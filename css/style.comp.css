@@ -108,7 +108,9 @@ body {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  align-items: center; }
 
 a {
   text-decoration: none;
@@ -342,7 +344,8 @@ button {
   .event-box__picture {
     position: relative;
     display: inline-block;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    width: 100%; }
     .event-box__picture img {
       border-top-right-radius: 1rem;
       border-top-left-radius: 1rem; }
@@ -1042,6 +1045,29 @@ textarea:focus {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem; }
 
+.footer {
+  background-color: #323B3C; }
+  .footer__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__items {
+        flex-wrap: wrap; } }
+  .footer__text {
+    color: #fff;
+    text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__text {
+        order: 1; } }
+  .footer__list {
+    justify-content: space-between; }
+  .footer__item {
+    margin-right: 3rem; }
+    .footer__item:last-child {
+      margin: 0; }
+
 .header {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -1078,7 +1104,8 @@ textarea:focus {
     opacity: 1;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none; }
+    background-repeat: none;
+    animation: imageAnimation 40s linear infinite 0s; }
 
 .location {
   color: #fff; }
@@ -1155,7 +1182,7 @@ textarea:focus {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 120rem; }
+  max-width: 100%; }
   @media only screen and (max-width: 37.5em) {
     .nav {
       flex-direction: column;
@@ -1196,6 +1223,8 @@ textarea:focus {
         position: absolute;
         top: 2%;
         left: 2%; } }
+  .logo--footer {
+    margin-left: 0; }
 
 .user-nav {
   align-self: stretch;
@@ -1234,6 +1263,10 @@ textarea:focus {
     height: 2.25rem;
     width: 2.25rem;
     fill: #fff; }
+    .user-nav__icon--footer {
+      transition: transform .2s ease-in-out; }
+      .user-nav__icon--footer:hover {
+        transform: scale(1.5); }
   .user-nav__notification {
     font-size: .8rem;
     height: 1.75rem;

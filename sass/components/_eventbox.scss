@@ -94,6 +94,8 @@
     position: relative;
     display: inline-block;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+    width: 100%;
 
     & img {
       border-top-right-radius: 1rem;
